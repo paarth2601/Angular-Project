@@ -11,6 +11,8 @@ import { ContactComponent } from './Main/contact/contact.component';
 import { ProductComponent } from './Main/product/product.component';
 import { CartComponent } from './Main/cart/cart.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GalleryComponent } from './Main/gallery/gallery.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     ContactComponent,
     ProductComponent,
-    CartComponent
+    CartComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
