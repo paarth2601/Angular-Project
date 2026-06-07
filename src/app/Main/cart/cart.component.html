@@ -1,1 +1,137 @@
-<p>cart works!</p>
+<div class="empty-cart" *ngIf="cartItems.length === 0">
+    <h2>
+        Your Cart is Empty
+    </h2>
+    <p>
+        Looks like you haven't added anything to your cart yet.
+    </p>
+    <button class="continue-btn" routerLink="/products">
+        Start Shopping
+    </button>
+</div>
+
+
+
+<div class="cart-container" *ngIf="cartItems.length > 0">
+
+    <!-- ITEM SUMMARY -->
+    <div class="cart-left">
+        <h1 class="cart-title">
+            Shopping Cart
+        </h1>
+
+        <p class="cart-count">
+            {{ getTotalItems() }}
+            {{ getTotalItems() === 1 ? 'Item' : 'Items' }} in your cart.
+        </p>
+
+        <!-- CART ITEM -->
+
+        <div class="cart-item" *ngFor="let item of cartItems">
+            <img [src]="item.image" class="product-image">
+            <div class="product-info">
+                <h3>
+                    {{item.name}}
+                </h3>
+            </div>
+
+            <div class="price-section">
+                <div class="offer-price">
+                    ₹{{item.offerPrice}}
+                </div>
+
+                <div class="qty-box">
+                    <button (click)="decreaseQty(item)">
+                        {{ item.quantity === 1 ? '🗑' : '-' }}
+                    </button>
+                    <span>
+                        {{item.quantity}}
+                    </span>
+                    <button (click)="increaseQty(item)">
+                        +
+                    </button>
+                </div>
+
+                <div class="total-price">
+                    ₹{{item.offerPrice * item.quantity}}
+                </div>
+            </div>
+        </div>
+
+        <!-- Repeat Items -->
+        <button class="continue-btn" routerLink="/products">
+            ← Continue Shopping
+        </button>
+    </div>
+
+    <!-- ORDER SUMMARY -->
+    <div class="cart-right">
+        <h2>
+            Order Summary
+        </h2>
+
+        <div class="summary-row">
+            <span>Subtotal</span>
+            <span>₹{{getSubtotal()}}</span>
+        </div>
+
+        <div class="summary-row">
+            <span>Shipping</span>
+            <div>
+                <span *ngIf="getSubtotal() <= 500;">
+                    ₹99
+                </span>
+            </div>
+            <div *ngIf="getSubtotal() >500;">
+                <span class="free">
+                    FREE
+                </span>
+            </div>
+        </div>
+
+        <!-- <div class="summary-row">
+            <span>Discount (10%)</span>
+            <span>-₹{{getDiscount()}}</span>
+        </div> -->
+
+        <hr>
+
+        <div class="grand-total">
+            <span>Grand Total</span>
+            <span>₹{{getGrandTotal()}}</span>
+        </div>
+
+        <p class="tax">
+            (Inclusive of all taxes)
+        </p>
+
+        <div class="shipping-banner">
+            <div *ngIf="getSubtotal() < 500">
+                Add items worth ₹{{500 - getSubtotal()}} more to get free shipping!
+            </div>
+            <div *ngIf="getSubtotal() >= 500">
+                🚚 Yay! You got free shipping
+            </div> 
+        </div>
+
+        <button class="checkout-btn">
+            Proceed To Checkout
+        </button>
+
+        <div class="features">
+            <div>
+                🔒
+                <span>100% Secure</span>
+            </div>
+            <div>
+                ↺
+                <span>Easy Returns</span>
+            </div>
+            <div>
+                ⭐
+                <span>Premium Quality</span>
+            </div>
+        </div>
+
+    </div>
+</div>
