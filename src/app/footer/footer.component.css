@@ -10,12 +10,12 @@ footer {
 
 /* Footer Top Grid */
 .footer-top {
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 56px 24px 40px;
+    padding: 40px 60px 10px;
     display: grid;
     grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
     gap: 48px;
+    text-align: center;
 }
 
 /* Brand Section */
@@ -27,29 +27,7 @@ footer {
 }
 
 .footer-logo-icon {
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.12);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-}
-
-.footer-brand-name {
-    font-family: 'Georgia', serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #fff;
-    display: block;
-}
-
-.footer-brand-sub {
-    font-size: 0.6rem;
-    letter-spacing: 0.18em;
-    color: rgba(255, 255, 255, 0.55);
-    text-transform: uppercase;
+    width: 250px
 }
 
 .footer-brand p {
@@ -60,7 +38,7 @@ footer {
 }
 
 .footer-divider {
-    width: 40px;
+    width: 250px;
     height: 1.5px;
     background: #c8a84b;
     border: none;
@@ -98,30 +76,38 @@ footer {
 }
 
 /* Social Icons */
+.fa-instagram {
+    font-size: 24px;
+    background: linear-gradient(45deg,
+            #f09433,
+            #e6683c,
+            #dc2743,
+            #cc2366,
+            #bc1888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.fa-whatsapp{
+    font-size: 24px;
+    color: #25D366;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.fa-facebook{
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
 .social-icons {
     display: flex;
     gap: 10px;
     margin-top: 4px;
-}
-
-.social-icons a {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    display: flex;
-    align-items: center;
     justify-content: center;
-    color: rgba(255, 255, 255, 0.75);
-    text-decoration: none;
-    font-size: 1rem;
-    transition: background 0.2s, border-color 0.2s, color 0.2s;
-}
-
-.social-icons a:hover {
-    background: #c8a84b;
-    border-color: #c8a84b;
-    color: #1b3a1f;
 }
 
 /* Footer Bottom */
@@ -130,9 +116,8 @@ footer {
 }
 
 .footer-bottom-inner {
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 18px 24px;
+    padding: 18px 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
