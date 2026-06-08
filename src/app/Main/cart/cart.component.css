@@ -1,38 +1,39 @@
 .empty-cart {
-  min-height: 50vh; /* adjust as needed */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 40px 20px;
+    min-height: 50vh;
+    /* adjust as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
 }
 
 .empty-cart h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
-  color: #333;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #333;
 }
 
 .empty-cart p {
-  font-size: 18px;
-  color: #666;
-  margin-bottom: 25px;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 25px;
 }
 
 .empty-cart button {
-  padding: 12px 30px;
-  border: 1px solid #0d4d2b;
-  border-radius: 8px;
-  background: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  transition: 0.3s;
+    padding: 12px 30px;
+    border: 1px solid #0d4d2b;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
 .empty-cart button:hover {
-  background: #0d4d2b;
-  color: #fff;
+    background: #0d4d2b;
+    color: #fff;
 }
 
 /* PRODUCTS CART CSS */
@@ -124,13 +125,24 @@
     overflow: hidden;
 }
 
-.qty-box button {
+.qty-box button,
+.qty-box .qtyminus {
     width: 45px;
     height: 45px;
     border: none;
     background: #f5f5f5;
     cursor: pointer;
     font-size: 20px;
+}
+
+.qty-box button i {
+    font-size: 14px;
+}
+
+.qty-box button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .qty-box span {
@@ -235,4 +247,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.feature-item {
+    align-items: center;
 }
