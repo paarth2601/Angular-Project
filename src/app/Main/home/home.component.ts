@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  openWhatsapp() {
+
+    const message =
+      encodeURIComponent(
+        'Hello, I would like to know more about your products.'
+      );
+
+    window.open(
+      `https://wa.me/917889505059?text=${message}`,
+      '_blank'
+    );
+
+  }
+
+
 }
