@@ -1,1 +1,70 @@
-<p>contact works!</p>
+<section class="contact-section">
+
+    <div class="breadcrumb">
+        Home / Contact Us
+    </div>
+
+    <div class="page-heading">
+        <h2>Contact Us</h2>
+        <div class="divider"></div>
+        <p class="subtitle">We'd love to hear from you!</p>
+    </div>
+
+    <div class="contact-container">
+
+        <!-- LEFT CARD -->
+        <div class="contact-info-card">
+            <h2>Get in Touch</h2>
+            <p class="info-text">
+                Have a question or need help with your order?
+                Reach out to us.
+            </p>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-phone" style="color: rgb(13, 77, 43);"></i>
+                <span>+91 7889505059</span>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-brands fa-instagram" style="color: rgb(13, 77, 43);"></i>
+                <span>@swaad_e_kashmir</span>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope" style="color: rgb(13, 77, 43);"></i>
+                <span>swaadekashmir@gmail.com</span>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot" style="color: rgb(13, 77, 43);"></i>
+                <span>Jammu & Kashmir, India</span>
+            </div>
+
+            <div class="text-align-center">
+                <h3 class="whatsapp-title">
+                    Connect on WhatsApp
+                </h3>
+
+                <button class="whatsapp-btn" (click)="openWhatsapp()">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Chat With Us
+                </button>
+            </div>
+        </div>
+
+        <!-- RIGHT CARD -->
+        <div class="contact-form-card">
+            <form (ngSubmit)="submitForm()">
+                <input type="text" placeholder="Your Name" name="name" [(ngModel)]="contactData.name">
+                <input type="email" placeholder="Your Email" name="email" [(ngModel)]="contactData.email">
+                <textarea rows="7" placeholder="Your Message" name="message" [(ngModel)]="contactData.message">
+                </textarea>
+                <button type="submit" class="submit-btn">
+                    Send Message
+                </button>
+                <p class="success-message" *ngIf="messageSent">✓ Your message has been sent successfully.</p>
+            </form>
+        </div>
+    </div>
+
+</section>
