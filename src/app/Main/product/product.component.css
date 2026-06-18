@@ -1,0 +1,211 @@
+.products-section {
+    padding: 30px;
+    background: #faf8f2;
+    min-height: 100vh;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.breadcrumb {
+    text-align: left;
+    color: #777;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.heading h2 {
+    font-size: 42px;
+    color: #1f4d36;
+    margin-bottom: 10px;
+    font-family: serif;
+}
+
+.divider {
+    width: 80px;
+    height: 2px;
+    background: #d4a017;
+    margin: 15px auto;
+}
+
+.subtitle {
+    color: #666;
+    line-height: 1.7;
+}
+
+.products-layout {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.categories {
+    width: 220px;
+    border-radius: 15px;
+    border: 1px solid #1f4d36;
+    padding: 15px;
+    height: fit-content;
+}
+
+.cattext {
+    color: #1f4d36;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.categories ul {
+    list-style: none;
+    padding: 0;
+}
+
+.categories li {
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.categories li:hover {
+    background: #f3f3f3;
+}
+
+.categories li.active {
+    background: #1f4d36;
+    color: #fff;
+}
+
+.products-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .08);
+    padding-bottom: 20px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-card h4 {
+    margin: 10px 15px;
+}
+
+.size {
+    margin: 0 15px;
+    color: #777;
+}
+
+.price-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 10px 15px;
+}
+
+.mrp {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.offer-price {
+    color: #1f4d36;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.discount {
+    margin: 0 15px 15px;
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+/* CART CSS */
+.cart-section {
+    margin: 15px 15px 0 15px;
+}
+
+.add-cart-btn {
+    width: 100%;
+    padding: 12px;
+    background: #1F4D36;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-cart-btn:hover {
+    background: #163826;
+}
+
+.go-cart-btn:hover {
+    background: #1F4D36;
+    color: #fff;
+}
+
+.go-cart-btn {
+    width: 100%;
+    padding: 12px;
+    color: #1F4D36;
+    background: white;
+    border: 1 px solid #1F4D36;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.qty-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #1F4D36;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 45px;
+    margin-bottom: 15px;
+}
+
+.hide-btn {
+    visibility: hidden;
+}
+
+.qty-btn {
+    width: 45px;
+    height: 45px;
+    border: none;
+    background: #1F4D36;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.qty-btn:hover {
+    background: #163826;
+}
+
+.qty-value {
+    width: 60px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1F4D36;
+}

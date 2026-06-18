@@ -1,1 +1,71 @@
-<p>product works!</p>
+<section class="products-section">
+
+    <div class="heading">
+        <p class="breadcrumb">Home / Shop</p>
+        <h2>Shop Our Products</h2>
+        <div class="divider"></div>
+        <p class="subtitle">
+            Handpicked, premium quality products <br>
+            from the valleys of Jammu & Kashmir.
+        </p>
+    </div>
+
+    <div class="products-layout">
+        <aside class="categories">
+            <h2 class="cattext">Categories</h2>
+            <ul>
+                <li *ngFor="let category of categories" (click)="filterProducts(category)"
+                    [class.active]="selectedCategory === category">
+                    {{ category }}
+                </li>
+            </ul>
+        </aside>
+
+        <div class="products-grid">
+            <div class="product-card" *ngFor="let product of filteredProducts">
+                <img [src]="product.image" [alt]="product.name">
+                <h4>{{product.name}}</h4>
+                <p class="size">
+                    {{product.size}}
+                </p>
+                <div class="price-wrapper">
+                    <span class="mrp">
+                        ₹{{product.mrp}}
+                    </span>
+                    <span class="offer-price">
+                        ₹{{product.offerPrice}}
+                    </span>
+                </div>
+                <div class="discount">
+                    {{product.discount}}% OFF
+                </div>
+
+                <!-- CART BUTTON -->
+                <div class="cart-section">
+                    <button *ngIf="!cartItems[product._id]" class="add-cart-btn" (click)="addToCart(product)">
+                        Add To Cart
+                    </button>
+
+                    <div *ngIf="cartItems[product._id]" class="qty-container">
+                        <button class="qty-btn" (click)="decreaseQty(product)">
+                            −
+                        </button>
+                        <span class="qty-value">
+                            {{ cartItems[product._id] }}
+                        </span>
+                        <button class="qty-btn" (click)="increaseQty(product)">
+                            +
+                        </button>
+                    </div>
+
+                    <button [class.hide-btn]="!cartItems[product._id]" class="go-cart-btn" routerLink="/cart">
+                        Go To Cart
+                    </button>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</section>
