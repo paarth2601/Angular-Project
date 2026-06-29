@@ -1,0 +1,25 @@
+<section class="gallery-section">
+    <div class="breadcrumb">
+        Home / Contact Us
+    </div>
+    
+    <div class="page-heading">
+        <h2>Gallery</h2>
+        <div class="divider"></div>
+        <p class="subtitle">A glimpse of purity, tradition & the beauty of Kashmir.</p>
+    </div>
+
+
+    <div class="gallery-filter">
+        <button *ngFor="let category of categories" class="filter-btn" [class.active]="selectedCategory === category"
+            (click)="filterImages(category)">
+            {{category}}
+        </button>
+    </div>
+
+    <div class="gallery-grid">
+        <div class="gallery-item" *ngFor="let item of filteredImages">
+            <img [src]="item.image">
+        </div>
+    </div>
+</section>
